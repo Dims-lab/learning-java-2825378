@@ -1,0 +1,44 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Scanner;\r\n\r\npublic class Main {\r\n\r\n    public static void main(String[] args) {\r\n\r\n        System.out.println(\"Let's calculate the area of a triangle\");\r\n\r\n        Scanner input = new Scanner(System.in);\r\n\r\n        System.out.println(\"Please input the base of the triangle (in inches).\");\r\n        double base = input.nextDouble()\r\n\r\n        while (base <= 0) {\r\n            System.out.println(\"That's invalid. Please input the base of the triangle (in inches).\");\r\n            base = input.nextDouble();\r\n        }\r\n\r\n        System.out.println(\"Please input the height of the triangle (in inches).\");\r\n        double height = input.nextDouble();\r\n        while (height <= 0) {\r\n            System.out.println(\"That's invalid. Please input the base of the triangle (in inches).\");\r\n            base = input.nextDouble();\r\n        }\r\n\r\n        double area = (base * height) / 2;\r\n        System.out.println(\"The area is \" + height);\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision 6d7293f879ad16e67e0e2a1c1ed8a6904975b323)
++++ b/src/Main.java	(date 1665412956780)
+@@ -1,30 +1,4 @@
+-import java.util.Scanner;
+-
+ public class Main {
+ 
+-    public static void main(String[] args) {
+-
+-        System.out.println("Let's calculate the area of a triangle");
+-
+-        Scanner input = new Scanner(System.in);
+-
+-        System.out.println("Please input the base of the triangle (in inches).");
+-        double base = input.nextDouble()
+-
+-        while (base <= 0) {
+-            System.out.println("That's invalid. Please input the base of the triangle (in inches).");
+-            base = input.nextDouble();
+-        }
+-
+-        System.out.println("Please input the height of the triangle (in inches).");
+-        double height = input.nextDouble();
+-        while (height <= 0) {
+-            System.out.println("That's invalid. Please input the base of the triangle (in inches).");
+-            base = input.nextDouble();
+-        }
+-
+-        double area = (base * height) / 2;
+-        System.out.println("The area is " + height);
+-
+-    }
+-}
++    public static void main(String[] args) {}
++}
+\ No newline at end of file

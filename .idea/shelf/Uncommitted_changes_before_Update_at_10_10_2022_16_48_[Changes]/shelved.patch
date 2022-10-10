@@ -1,0 +1,42 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Main {\r\n\r\n    public static void main(String[] args) {\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision 05c1a83c72c6271b3adc6c75019c6eb6ff725eab)
++++ b/src/Main.java	(date 1665413031007)
+@@ -1,7 +1,30 @@
++import java.util.Scanner;
++
+ public class Main {
+ 
+     public static void main(String[] args) {
+ 
+-    }
++        System.out.println("Let's calculate the area of a triangle");
++
++        Scanner input = new Scanner(System.in);
++
++        System.out.println("Please input the base of the triangle (in inches).");
++        double base = input.nextDouble()
++
++        while (base <= 0) {
++            System.out.println("That's invalid. Please input the base of the triangle (in inches).");
++            base = input.nextDouble();
++        }
+ 
++        System.out.println("Please input the height of the triangle (in inches).");
++        double height = input.nextDouble();
++        while (height <= 0) {
++            System.out.println("That's invalid. Please input the base of the triangle (in inches).");
++            base = input.nextDouble();
++        }
++
++        double area = (base * height) / 2;
++        System.out.println("The area is " + height);
++
++    }
+ }

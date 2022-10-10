@@ -1,0 +1,30 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Main {\r\n\r\n    public static void calculateTotalMealPrice() {\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision 47a5497c8d296520b349ccd43413a88ccfff2a2f)
++++ b/src/Main.java	(date 1665415556003)
+@@ -1,9 +1,17 @@
+ public class Main {
+ 
+-    public static void calculateTotalMealPrice() {
++    public static void calculateTotalMealPrice(double listedmealprice, double tiprate, double taxrate)
++    {
++        double tip = tiprate * listedmealprice;
++        double tax = taxrate * listedmealprice;
++        double result = listedmealprice + tip + tax;
++        System.out.println("De prijs van je maaltijd is " + result);
+     }
+ 
+-    public static void main(String[] args) {
++    public static void main(String[] args)
++    {
++    calculateTotalMealPrice( 15, .2, .08 );
++    calculateTotalMealPrice( 25, .18, .08 );
+     }
+ 
+ }

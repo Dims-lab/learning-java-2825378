@@ -1,0 +1,33 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.Scanner;\r\n\r\npublic class Main {\r\n\r\n    public static void announceDeveloperTeaTime() {\r\n        System.out.println(\"Waiting for developer tea time...\");\r\n        System.out.println(\"Type in a random word and press Enter to start developer tea time\");\r\n        Scanner input = new Scanner(System.in);\r\n        input.next();\r\n        System.out.println(\"It's developer tea time!\");\r\n    }\r\n    public static void main(String[] args) {\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision 058e6662437fdf3ed92885996c0279c1571f459c)
++++ b/src/Main.java	(date 1665413619974)
+@@ -1,15 +1,19 @@
+ import java.util.Scanner;
+ 
+-public class Main {
++public class Main
++{
+ 
+-    public static void announceDeveloperTeaTime() {
++    public static void announceDeveloperTeaTime()
++    {
+         System.out.println("Waiting for developer tea time...");
+         System.out.println("Type in a random word and press Enter to start developer tea time");
+         Scanner input = new Scanner(System.in);
+         input.next();
+         System.out.println("It's developer tea time!");
+     }
+-    public static void main(String[] args) {
++    public static void main(String[] args)
++    {
++        announceDeveloperTeaTime();
+ 
+     }
+ 
